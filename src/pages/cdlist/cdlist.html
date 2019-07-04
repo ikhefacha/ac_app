@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+
+      <button ion-button icon-only (click)="onToggleMenu()">
+
+        <ion-icon name="menu"></ion-icon>
+
+      </button>
+
+    </ion-buttons>
+    <ion-title>Liste des CDs</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-item *ngFor="let cd of cds" (click)="Openmodal(cd)" [color]="cd.isLend ? 'danger' : 'light'">
+
+    {{ cd.name }}
+
+  </button>
+</ion-content>

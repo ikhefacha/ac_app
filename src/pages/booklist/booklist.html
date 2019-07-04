@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start>
+
+    <button ion-button icon-only (click)="onToggleMenu()">
+
+      <ion-icon name="menu"></ion-icon>
+
+    </button>
+
+  </ion-buttons>
+    <ion-title>Liste des Livres</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+  <button ion-item *ngFor="let book of books" (click)="Openmodal(book)" [color]="book.isLend ? 'danger' : 'light'">
+
+    {{ book.name }}
+
+  </button>
+</ion-list>
+</ion-content>

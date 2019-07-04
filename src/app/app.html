@@ -1,0 +1,18 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-title> MENU </ion-title>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-button icon-start (click)="onNavigate(tabspage)">
+        <ion-icon name="book"></ion-icon>
+        Emprunter/Rendre
+      </button>
+      <button ion-button icon-start (click)="onNavigate(settingspage)">
+        <ion-icon name="options"></ion-icon>
+        Options
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="tabspage" #content></ion-nav>
